@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fireworks</title>
+    <link rel="stylesheet" href="./test/phaohoa.css" />
+  </head>
+  <body>
+    <div>
+      <div class="tieu_de">
+        <div><h1>CHÚC MỪNG NĂM MỚI</h1></div>
+      </div>
+      <div class="tab-content">
+        <button popovertarget="my-popovr">click</button>
+        <div id="my-popovr" popover>
+          <div class="box">say hi</div>
+        </div>
+      </div>
+      <div class="phaohoa">
+        <canvas id="fireworksCanvas"></canvas>
+        <audio
+          id="launchSound"
+          src="https://www.soundjay.com/button/sounds/button-3.mp3"
+        ></audio>
+        <audio
+          id="explosionSound"
+          src="https://www.soundjay.com/explosion/sounds/explosion-1.mp3"
+        ></audio>
+      </div>
+    </div>
+
+    <script src="./test/phaohoa.js"></script>
+  </body>
+</html>
