@@ -26,13 +26,7 @@ canvas {
   font-family: "Saira Stencil One", sans-serif;
   font-size: 2rem;
   margin: 0;
-  /* animation: glow 5s infinite alternate; */
-  text-shadow: 0 0 20px #ff00ff,
-    /* Phát sáng gần (hồng nhạt) */ 0 0 30px #ff00ff,
-    /* Phát sáng trung bình (hồng nhạt) */ 0 0 40px #ff00ff,
-    /* Phát sáng xa (hồng đậm) */ 0 0 50px #ff00ff,
-    /* Tăng cường phát sáng xa */ 0 0 60px #ff00ff,
-    /* Hồng đậm hơn */ 0 0 70px #ff00ff; /* Hiệu ứng phát sáng cuối cùng */
+  animation: glow 5s infinite alternate;
 }
 
 .content p {
