@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hiệu ứng pháo hoa</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Saira+Stencil+One&family=Sen&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <canvas id="fireworksCanvas"></canvas>
 
-    <div class="content">
-      <h1>Happy New Year 2025</h1>
-      <p>Chúc bạn một năm tràn đầy niềm vui và hạnh phúc!</p>
-      <button class="nutbam" popovertarget="my-popovr">click me</button>
+    <div>
+      <div class="content">
+        <h1>Happy New Year 2025</h1>
+        <p>Chúc bạn một năm tràn đầy niềm vui và hạnh phúc!</p>
+        <button class="nutbam" popovertarget="my-popovr">H</button>
+      </div>
       <div id="my-popovr" popover>
-        <form class="form-option"><div class="box">say hi</div></form>
+        <form class="form">
+          <div class="box">
+            <div class="tieuDe">HAPPY<br />NEW YEAR<br />2025</div>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis distinctio dolorum nesciunt explicabo vel recusandae
+              tempore omnis quae ipsam iste cumque rem neque itaque, porro
+              cupiditate eum earum et error.
+            </p>
+            <img class="img_QR" src="./QR_huy_hunter.png" alt="QR code" />
+          </div>
+        </form>
       </div>
     </div>
     <script src="phaohoa.js"></script>
