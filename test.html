@@ -5,105 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy New Year 2025</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #fdf5e6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
+      /* From Uiverse.io by dylanharriscameron */
       .card {
         position: relative;
-        width: 400px;
-        height: 600px;
-        background-color: #fff;
-        border: 2px solid #c1232c;
+        width: 200px;
+        height: 250px;
+        border-radius: 14px;
+        z-index: 1111;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
       }
-      .card .text {
+
+      .bg {
         position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 190px;
+        height: 240px;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(24px);
+        border-radius: 10px;
+        overflow: hidden;
+        outline: 2px solid white;
+      }
+
+      .blob {
+        position: absolute;
+        z-index: 1;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        font-size: 36px;
-        font-weight: bold;
-        color: #c1232c;
-        line-height: 1.5;
-      }
-      .decorations {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .decorations .circle {
-        position: absolute;
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        border: 2px solid #ffcc33;
+        background-color: #ff0000;
+        opacity: 1;
+        filter: blur(12px);
+        animation: blob-bounce 5s infinite ease;
       }
-      .decorations .circle-1 {
-        top: 10%;
-        left: 10%;
+
+      @keyframes blob-bounce {
+        0% {
+          transform: translate(-100%, -100%) translate3d(0, 0, 0);
+        }
+
+        25% {
+          transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+        }
+
+        50% {
+          transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+        }
+
+        75% {
+          transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+        }
+
+        100% {
+          transform: translate(-100%, -100%) translate3d(0, 0, 0);
+        }
       }
-      .decorations .circle-2 {
-        bottom: 15%;
-        right: 10%;
-      }
-      .decorations .lantern {
-        position: absolute;
-        top: 5%;
-        left: 15%;
-        width: 50px;
-        height: auto;
-      }
-      .decorations .fish {
-        position: absolute;
-        bottom: 10%;
-        left: 20%;
-        width: 50px;
-        height: auto;
-      }
-      .decorations .bowl {
-        position: absolute;
-        top: 20%;
-        right: 20%;
-        width: 50px;
-        height: auto;
-      }
-      .decorations .line {
-        position: absolute;
-        height: 2px;
-        width: 100px;
-        background: #c1232c;
-      }
-      .decorations .line-1 {
-        top: 70%;
-        left: 5%;
-      }
-      .decorations .line-2 {
-        bottom: 10%;
-        right: 5%;
+      h1 {
+        font-size: 3rem; /* Kích thước chữ lớn */
+        font-weight: bold; /* Chữ đậm */
+        color: white; /* Màu chữ chính */
+        text-shadow: 0 0 5px #ff69b4,
+          /* Phát sáng gần (hồng nhạt) */ 0 0 10px #ff69b4,
+          /* Phát sáng trung bình (hồng nhạt) */ 0 0 20px #ff1493,
+          /* Phát sáng xa (hồng đậm) */ 0 0 30px #ff1493,
+          /* Tăng cường phát sáng xa */ 0 0 40px #ff1493,
+          /* Hồng đậm hơn */ 0 0 50px #ff1493; /* Hiệu ứng phát sáng cuối cùng */
+        font-family: "Arial", sans-serif; /* Font chữ đơn giản, hiện đại */
+        text-align: center; /* Căn giữa văn bản */
+        margin: 20px 0; /* Khoảng cách trên dưới */
       }
     </style>
   </head>
   <body>
+    <div>
+      <div class="content">
+        <h1>Happy New Year 2025</h1>
+        <div class="text">Chúc bạn một năm tràn đầy niềm vui và hạnh phúc!</div>
+
+        <button class="btn" popovertarget="my-popovr">
+          <svg
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20.503"
+            height="20.625"
+            viewBox="0 0 17.503 15.625"
+          >
+            <path
+              id="Fill"
+              d="M8.752,15.625h0L1.383,8.162a4.824,4.824,0,0,1,0-6.762,4.679,4.679,0,0,1,6.674,0l.694.7.694-.7a4.678,4.678,0,0,1,6.675,0,4.825,4.825,0,0,1,0,6.762L8.752,15.624ZM4.72,1.25A3.442,3.442,0,0,0,2.277,2.275a3.562,3.562,0,0,0,0,5l6.475,6.556,6.475-6.556a3.563,3.563,0,0,0,0-5A3.443,3.443,0,0,0,12.786,1.25h-.01a3.415,3.415,0,0,0-2.443,1.038L8.752,3.9,7.164,2.275A3.442,3.442,0,0,0,4.72,1.25Z"
+              transform="translate(0 0)"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div id="my-popovr" popover>
+        <form class="form">
+          <div class="box">
+            <div class="tieuDe">HAPPY<br />NEW YEAR<br />2025</div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis distinctio dolorum nesciunt explicabo vel recusandae
+              tempore omnis quae ipsam iste cumque rem neque itaque, porro
+              cupiditate eum earum et error.
+            </p>
+            <div class="img_QR">
+              <img src="./QR_huy_hunter1.png" alt="QR code" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="card">
-      <div class="text">HAPPY<br />NEW YEAR<br />2025</div>
-      <div class="decorations">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-        <div class="line line-1"></div>
-        <div class="line line-2"></div>
-        <div class="lantern">🎈</div>
-        <div class="fish">🐟</div>
-        <div class="bowl">🥠</div>
+      <div class="bg"></div>
+      <div class="blob">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut amet eum,
+          molestiae non eligendi quae impedit modi itaque ipsum, maiores
+          aliquam, doloremque eius harum magni magnam temporibus obcaecati
+          doloribus commodi.
+        </p>
       </div>
     </div>
   </body>

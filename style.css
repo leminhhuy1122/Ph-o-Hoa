@@ -24,9 +24,15 @@ canvas {
 
 .content h1 {
   font-family: "Saira Stencil One", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
-  animation: glow 1.5s infinite alternate;
+  /* animation: glow 5s infinite alternate; */
+  text-shadow: 0 0 20px #ff00ff,
+    /* Phát sáng gần (hồng nhạt) */ 0 0 30px #ff00ff,
+    /* Phát sáng trung bình (hồng nhạt) */ 0 0 40px #ff00ff,
+    /* Phát sáng xa (hồng đậm) */ 0 0 50px #ff00ff,
+    /* Tăng cường phát sáng xa */ 0 0 60px #ff00ff,
+    /* Hồng đậm hơn */ 0 0 70px #ff00ff; /* Hiệu ứng phát sáng cuối cùng */
 }
 
 .content p {
@@ -35,152 +41,155 @@ canvas {
 }
 
 @keyframes glow {
-  from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
-      0 0 30px #ff00ff;
+  30% {
+    text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff,
+      0 0 50px #ff00ff;
+    color: #ff00ff;
   }
-  to {
-    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff00ff,
-      0 0 60px #ff00ff;
+  100% {
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+    color: #fff;
   }
 }
 
 .form {
   display: flex;
   justify-content: space-around;
-  width: 924px;
-  height: 656px;
+  /* width: 924px;
+  height: 656px; */
+  width: 350px;
+  height: 500px;
   box-sizing: border-box;
-  background-image: url(./bg_phao_hoa.png);
-  background-size: cover;
+  background-image: url(./Thiết\ kế\ chưa\ có\ tên.png);
+  background-size: cover; /* Ảnh nền phủ toàn bộ div */
   background-position: center;
-  background-repeat: no-repeat;
-  padding: 30px;
+  background-repeat: repeat;
+  padding: 30px; /*Khoảng cách giữa ảnh nền và nội dung*/
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước div */
 }
-
-/* Phần chứa box */
 .box {
   position: relative;
-  width: 458px;
-  height: 590px;
-}
+  /* display: flex; */
 
-/* Nút bấm với thiết kế hình tròn */
-.nutbam {
-  font-family: "Saira Stencil One", sans-serif;
-  position: relative;
-  text-align: center;
-  font-size: 20px;
-  width: 100px;
+  width: auto;
   height: auto;
-  border-radius: 50%; /* Làm cho nút có hình dạng tròn */
-  box-sizing: border-box;
-  background-image: url(./bg_phao_hoa.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 30px;
 }
 
-/* Tiêu đề của mỗi box */
 .box .tieuDe {
   font-family: "Saira Stencil One", sans-serif;
-  font-size: 50px;
-  text-align: center;
-  margin-top: 20px;
+  font-size: 30px; /* Kích thước chữ lớn */
+  font-weight: bold; /* Chữ đậm */
+  color: FF0000; /* Màu chữ tối, dễ đọc */
+  text-align: center; /* Căn giữa văn bản */
+  margin: 10px 0; /* Khoảng cách trên và dưới */
+  padding: 10px 20px; /* Khoảng cách trong */
+  color: red;
+  border-radius: 15px; /* Bo góc mềm mại */
+  letter-spacing: 1px; /* Giãn khoảng cách giữa các chữ */
+  text-transform: uppercase; /* Chữ in hoa */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi */
+}
+p {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px; /* Kích thước chữ */
+  line-height: 1.6; /* Khoảng cách giữa các dòng */
+  color: #333; /* Màu chữ tối */
+  text-align: justify; /* Căn chỉnh văn bản đều */
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+  padding: 10px; /* Khoảng cách trong */
+  background-color: #f9f9f9; /* Màu nền nhạt */
+  border-radius: 10px; /* Bo góc mềm mại */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho phần tử */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi */
 }
 
-/* QR Code trong box */
+/* Hiệu ứng hover khi rê chuột vào */
+p:hover {
+  background-color: #f1f1f1; /* Màu nền sáng hơn khi hover */
+  color: #9e2089; /* Đổi màu chữ khi hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
 .box .img_QR {
-  width: 300px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+.box .img_QR img {
+  width: 60px;
+  text-align: center;
+}
+.text {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px; /* Kích thước chữ */
+  line-height: 1.6; /* Khoảng cách giữa các dòng */
+  color: #333; /* Màu chữ tối */
+  text-align: center; /* Căn chỉnh văn bản đều */
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+  padding: 10px; /* Khoảng cách trong */
+  background-color: #f9f9f9; /* Màu nền nhạt */
+  border-radius: 10px; /* Bo góc mềm mại */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho phần tử */
+  transition: all 0.3s ease; /* Hiệu ứng mượt mà khi thay đổi */
+}
+.text:hover {
+  background-color: #f1f1f1; /* Màu nền sáng hơn khi hover */
+  color: #9e2089; /* Đổi màu chữ khi hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+}
+/* nút bấm */
+/* From Uiverse.io by boryanakrasteva */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: relative;
 }
 
-/* Media Queries cho độ phân giải nhỏ hơn */
-@media (max-width: 768px) {
-  /* Định dạng lại phần form cho màn hình nhỏ */
-  .form {
-    flex-direction: column; /* Chuyển hướng các box thành cột */
-    align-items: center; /* Căn giữa các box */
-    width: 100%;
-    height: auto;
-    padding: 15px;
-  }
-
-  /* Cập nhật kích thước của các box */
-  .box {
-    width: 80%;
-    height: auto;
-    margin-bottom: 20px; /* Tạo khoảng cách giữa các box */
-  }
-
-  /* Kích thước tiêu đề trong phần content */
-  .content h1 {
-    font-size: 2rem; /* Giảm kích thước chữ */
-  }
-
-  /* Kích thước đoạn văn trong phần content */
-  .content p {
-    font-size: 1rem;
-  }
-
-  /* Cập nhật kích thước nút bấm */
-  .nutbam {
-    width: 80px;
-    font-size: 16px;
-    padding: 20px;
-  }
-
-  /* Kích thước tiêu đề trong mỗi box */
-  .box .tieuDe {
-    font-size: 40px;
-  }
-
-  /* Kích thước QR code */
-  .box .img_QR {
-    width: 250px;
-  }
+.btn::after {
+  position: relative;
+  text-align: center;
+  content: "like";
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s linear;
+  top: 115%;
 }
 
-@media (max-width: 480px) {
-  /* Định dạng lại phần form cho màn hình rất nhỏ (điện thoại) */
-  .form {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-  }
+.icon {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s linear;
+}
 
-  /* Cập nhật kích thước box */
-  .box {
-    width: 90%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+.icon path {
+  fill: white;
+  transition: 0.2s linear;
+}
 
-  /* Kích thước tiêu đề trong content */
-  .content h1 {
-    font-size: 1.5rem;
-  }
+.btn:hover > .icon {
+  transform: scale(1.2);
+}
 
-  /* Kích thước đoạn văn trong content */
-  .content p {
-    font-size: 0.9rem;
-  }
+.btn:hover > .icon path {
+  fill: rgb(177, 139, 189);
+}
 
-  /* Cập nhật kích thước nút bấm */
-  .nutbam {
-    width: 70px;
-    font-size: 14px;
-    padding: 15px;
-  }
-
-  /* Kích thước tiêu đề trong box */
-  .box .tieuDe {
-    font-size: 30px;
-  }
-
-  /* Kích thước QR code */
-  .box .img_QR {
-    width: 200px;
-  }
+.btn:hover::after {
+  visibility: visible;
+  opacity: 1;
+  top: 105%;
 }
