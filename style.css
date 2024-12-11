@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: glow 1.5s infinite alternate;
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff,
+      0 0 30px #ff00ff;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff00ff,
+      0 0 60px #ff00ff;
+  }
+}
